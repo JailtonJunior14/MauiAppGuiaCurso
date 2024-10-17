@@ -2,36 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppGuiaCurso.MainPage">
-
     <ScrollView>
-        <CollectionView ItemsSource="{Binding Cursos}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Frame Margin="10"
-                           Padding="10"
-                           CornerRadius="10"
-                           BackgroundColor="#f0f0f0">
-                        <StackLayout>
-                            <Image Source="{Binding Imagem}" 
-                                   Aspect="AspectFill"
-                                   HeightRequest="150"/>
-                            <Label Text="{Binding Titulo}" 
-                                   FontSize="Medium" 
-                                   FontAttributes="Bold"/>
-                            <Label Text="{Binding Descricao}" 
-                                   FontSize="Small" 
-                                   LineBreakMode="TailTruncation"/>
-                            <Label Text="{Binding Duracao}" 
-                                   FontSize="Small" 
-                                   TextColor="Gray"/>
-                        </StackLayout>
-                    </Frame>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-            <CollectionView.ItemsLayout>
-                <GridItemsLayout Span="3" />
-            </CollectionView.ItemsLayout>
-        </CollectionView>
-    </ScrollView>
+        <Grid ColumnDefinitions="*,*,*"
+              RowDefinitions="*,*,*,*"
+              RowSpacing="1" ColumnSpacing="1">
 
+            <!-- Botões -->
+            <Button Grid.Row="0" Grid.Column="0"   />
+            <Button Grid.Row="0" Grid.Column="1"    />
+            <Button Grid.Row="0" Grid.Column="2"   />
+
+            <Button Grid.Row="1" Grid.Column="0"  />
+            <Button Grid.Row="1" Grid.Column="1"  />
+            <Button Grid.Row="1" Grid.Column="2"  />
+
+            <Button Grid.Row="2" Grid.Column="0"   />
+            <Button Grid.Row="2" Grid.Column="1"  />
+            <Button Grid.Row="2" Grid.Column="2"   />
+
+            <Button Grid.Row="3" Grid.Column="0"  />
+            <Button Grid.Row="3" Grid.Column="1"  />
+            <Button Grid.Row="3" Grid.Column="2"  />
+        </Grid>
+    </ScrollView>
 </ContentPage>
