@@ -2,27 +2,43 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppGuiaCurso.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="btncursos" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="CornerRadius" Value="2"/>
+                <Setter Property="BorderColor" Value="Red"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="TextTransform" Value="Default"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ScrollView>
         <Grid ColumnDefinitions="*,*,*"
               RowDefinitions="*,*,*,*"
               RowSpacing="1" ColumnSpacing="1">
 
             <!-- Botões -->
-            <Button Grid.Row="0" Grid.Column="0"   />
-            <Button Grid.Row="0" Grid.Column="1"    />
-            <Button Grid.Row="0" Grid.Column="2"   />
+            <Button Grid.Row="0" Grid.Column="0" Style="{StaticResource btncursos}" x:Name="Pweb" Text="Programação WEB" LineBreakMode="WordWrap" Clicked="Pweb_Clicked"/>
+            <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource btncursos}" Text="Banco de Dados" LineBreakMode="WordWrap"/>
+            <Button Grid.Row="0" Grid.Column="2" Style="{StaticResource btncursos}" Text="Analise e Projeto de Sistemas" LineBreakMode="WordWrap"/>
 
-            <Button Grid.Row="1" Grid.Column="0"  />
-            <Button Grid.Row="1" Grid.Column="1"  />
-            <Button Grid.Row="1" Grid.Column="2"  />
+            <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource btncursos}" Text="Design Digital" LineBreakMode="WordWrap"/>
+            <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource btncursos}" Text="Fundamentos da Informatica" LineBreakMode="WordWrap"/>
+            <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource btncursos}" Text="Tecnicas de Programação e Algoritimos" LineBreakMode="WordWrap"/>
 
-            <Button Grid.Row="2" Grid.Column="0"   />
-            <Button Grid.Row="2" Grid.Column="1"  />
-            <Button Grid.Row="2" Grid.Column="2"   />
+            <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource btncursos}" Text="Desenvolvimento de Sistemas" LineBreakMode="WordWrap"/>
+            <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource btncursos}" Text="Programação de Aplicativos Mobile" LineBreakMode="WordWrap"/>
+            <Button Grid.Row="2" Grid.Column="2" Style="{StaticResource btncursos}" Text="Sistemas Embarcados" LineBreakMode="WordWrap"/>
 
-            <Button Grid.Row="3" Grid.Column="0"  />
-            <Button Grid.Row="3" Grid.Column="1"  />
-            <Button Grid.Row="3" Grid.Column="2"  />
+            <Button Grid.Row="3" Grid.Column="0" Style="{StaticResource btncursos}" Text="Qualidade e Teste de Software" LineBreakMode="WordWrap"/>
+            <Button Grid.Row="3" Grid.Column="1" Style="{StaticResource btncursos}" Text="Internet, Protocolos, e Segurança de Sistemas da Informação" LineBreakMode="WordWrap"/>
+            <Button Grid.Row="3" Grid.Column="2" Style="{StaticResource btncursos}" Text="TCC"/>
         </Grid>
     </ScrollView>
 </ContentPage>

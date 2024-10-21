@@ -63,7 +63,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Disciplinas\" />
+	  <Compile Update="Disciplinas\Pweb.xaml.cs">
+	    <DependentUpon>Pweb.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Disciplinas\Pweb.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
