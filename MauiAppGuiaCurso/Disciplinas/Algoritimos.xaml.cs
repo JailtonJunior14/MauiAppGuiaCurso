@@ -1,8 +1,8 @@
 namespace MauiAppGuiaCurso.Disciplinas;
 
-public partial class NewPage1 : ContentPage
+public partial class Algoritimos : ContentPage
 {
-	public NewPage1()
+	public Algoritimos()
 	{
 		InitializeComponent();
 	}

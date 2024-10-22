@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppGuiaCurso.Anos.Terceiro"
+             Title="Terceiro">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="btncursos" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="CornerRadius" Value="2"/>
+                <Setter Property="BorderColor" Value="Red"/>
+                <Setter Property="BorderWidth" Value="1"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid ColumnDefinitions="*,*"
+      RowDefinitions="*,*,*">
+        <Button Text="Qualidade e Teste de Software" Grid.Row="0" Grid.Column="0" Style="{StaticResource btncursos}"  LineBreakMode="WordWrap" x:Name="Qualidade" Clicked="Qualidade_Clicked" />
+        <Button Text="Internet, Protocolos e Segurança de Sistemas da Informação" Grid.Row="0" Grid.Column="1" Style="{StaticResource btncursos}"  LineBreakMode="WordWrap" x:Name="Protocolo" Clicked="Protocolo_Clicked"/>
+        <Button Text="Programação WEB III" Grid.Row="1" Grid.Column="0" Style="{StaticResource btncursos}" LineBreakMode="WordWrap" x:Name="WEBIII" Clicked="WEBIII_Clicked" />
+        <Button Text="Programação de Aplicativos Mobile II" Grid.Row="1" Grid.Column="1" Style="{StaticResource btncursos}" LineBreakMode="WordWrap" x:Name="MobileII" Clicked="MobileII_Clicked" />
+        <Button Text="Sistemas Embarcados" Grid.Row="2" Grid.Column="1" Style="{StaticResource btncursos}" LineBreakMode="WordWrap" x:Name="Embarcados" Clicked="Embarcados_Clicked" />
+        <Button Text="TCC" Grid.Row="2" Grid.Column="0" Style="{StaticResource btncursos}" LineBreakMode="WordWrap"  x:Name="TCC" Clicked="TCC_Clicked"/>
+
+    </Grid>
+</ContentPage>

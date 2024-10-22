@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppGuiaCurso.Anos.Segundo"
+             Title="Segundo">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="btncursos" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="CornerRadius" Value="2"/>
+                <Setter Property="BorderColor" Value="Red"/>
+                <Setter Property="BorderWidth" Value="1"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid ColumnDefinitions="*,*"
+          RowDefinitions="*,*">
+        <Button Text="Desenvolvimento de Sistemas" Grid.Row="0" Grid.Column="0" Style="{StaticResource btncursos}"  LineBreakMode="WordWrap" x:Name="DesenvolvimentoS" Clicked="DesenvolvimentoS_Clicked"/>
+        <Button Text="Banco de Dados II" Grid.Row="0" Grid.Column="1" Style="{StaticResource btncursos}"  LineBreakMode="WordWrap" x:Name="BancoII" Clicked="BancoII_Clicked"/>
+        <Button Text="Programação WEB II" Grid.Row="1" Grid.Column="0" Style="{StaticResource btncursos}" LineBreakMode="WordWrap" x:Name="WEBII" Clicked="WEBII_Clicked" />
+        <Button Text="Programação de Aplicativos Mobile I" Grid.Row="1" Grid.Column="1" Style="{StaticResource btncursos}" LineBreakMode="WordWrap" x:Name="Mobile" Clicked="Mobile_Clicked"/>
+
+    </Grid>
+</ContentPage>

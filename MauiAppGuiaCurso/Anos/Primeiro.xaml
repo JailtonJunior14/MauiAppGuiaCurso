@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppGuiaCurso.Anos.Primeiro"
+             Title="Primeiro">
+    <ContentPage.Resources>
+        <Style x:Key="btncursos" TargetType="Button">
+            <Setter Property="HorizontalOptions" Value="Fill"/>
+            <Setter Property="VerticalOptions" Value="Fill"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="CornerRadius" Value="2"/>
+            <Setter Property="BorderColor" Value="Red"/>
+            <Setter Property="BorderWidth" Value="1"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*">
+
+
+        <!-- Botões aplicando o estilo definido -->
+        <Button Text="Logica de Programação e Algoritimos" Grid.Row="0" Grid.Column="0" Style="{StaticResource btncursos}" LineBreakMode="WordWrap" x:Name="Algoritimo" Clicked="Algoritimo_Clicked" />
+        <Button Text="Analise e Projetos de Sistemas" Grid.Row="0" Grid.Column="1" Style="{StaticResource btncursos}" LineBreakMode="WordWrap" x:Name="Analise" Clicked="Analise_Clicked" />
+        <Button Text="Programação WEB I" Grid.Row="1" Grid.Column="0" Style="{StaticResource btncursos}" LineBreakMode="WordWrap" x:Name="WEB" Clicked="WEB_Clicked" />
+        <Button Text="Banco de Dados I" Grid.Row="1" Grid.Column="1" Style="{StaticResource btncursos}"  LineBreakMode="WordWrap" x:Name="Banco" Clicked="Banco_Clicked"/>
+        <Button Text="Design Digital" Grid.Row="2" Grid.Column="0" Style="{StaticResource btncursos}"  LineBreakMode="WordWrap" x:Name="Design" Clicked="Design_Clicked"/>
+        <Button Text="Fundamentos da Informatica" Grid.Row="2" Grid.Column="1" Style="{StaticResource btncursos}" LineBreakMode="WordWrap" x:Name="Fundamentos" Clicked="Fundamentos_Clicked" />
+    </Grid>
+</ContentPage>
