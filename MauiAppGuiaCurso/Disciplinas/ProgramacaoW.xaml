@@ -18,6 +18,7 @@
     <ScrollView>
         <StackLayout VerticalOptions="FillAndExpand">
             <Label x:Name="lblTitulo"
+                   Style="{StaticResource Titulo}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
             <Label x:Name="lblConteudo"

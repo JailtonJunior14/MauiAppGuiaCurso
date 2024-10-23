@@ -6,6 +6,8 @@ public partial class Segundo : ContentPage
 {
     string[][] conteudosWeb = new string[3][];
     string[][] conteudosBD = new string[2][];
+    string[][] conteudosDS = new string[2][];
+    string[][] conteudosM = new string[2][];
 
     public Segundo()
 	{
@@ -24,6 +26,9 @@ public partial class Segundo : ContentPage
             "\r\nBackup e recuperação de dados: Estratégias para proteger e restaurar dados em caso de falhas." +
             "\r\nSegurança: Controle de acesso e criptografia para proteger os dados." +
             "\r\nProcedimentos armazenados e triggers: Automação de tarefas e respostas automáticas a eventos." };
+        conteudosDS[0] = new string[] {"Desenvolvimento de Sistemas",""};
+        conteudosM[0] = new string[] { "Programação de Aplicativos Mobile I", "" };
+
 
     }
 
@@ -31,7 +36,11 @@ public partial class Segundo : ContentPage
     {
         try
         {
-            Navigation.PushAsync(new DesenvolvimentoDS());
+            string[] conteudoDS = conteudosDS[0];
+            Navigation.PushAsync(new DesenvolvimentoDS
+            {
+                BindingContext = conteudoDS
+            });
         }
         catch (Exception ex)
         {
@@ -78,7 +87,11 @@ public partial class Segundo : ContentPage
     {
         try
         {
-            Navigation.PushAsync(new Mobile());
+            string[] conteudoM = conteudosM[0];
+            Navigation.PushAsync(new Mobile
+            {
+                BindingContext = conteudoM
+            });
         }
         catch (Exception ex)
         {

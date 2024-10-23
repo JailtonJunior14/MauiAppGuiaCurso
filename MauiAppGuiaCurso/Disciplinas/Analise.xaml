@@ -2,19 +2,32 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppGuiaCurso.Disciplinas.Analise"
-             Title="Analise">
-    <VerticalStackLayout>
+             Title="Analise"
+             BackgroundColor="#03091f">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Titulo" TargetType="Label">
+                <Setter Property="TextColor" Value="#9b2bfc"/>
+            </Style>
+            <Style x:Key="Conteudo" TargetType="Label">
+                <Setter Property="TextColor" Value="#5195fc"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
         <Label 
+            x:Name="lblTitulo"
+            Style="{StaticResource Titulo}"
             Text="Analise e Projetos de Sistemas"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Label 
-            Text="O que é?"
+            <Label 
+            x:Name="lblConteudo"
+            Style="{StaticResource Conteudo}"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Label 
-            Text="O que aprendemos?"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
