@@ -2,26 +2,29 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppGuiaCurso.Disciplinas.ProgramacaoW"
-             Title="ProgramacaoW">
+             Title="Programação WEB I" 
+             BackgroundColor="#03091f">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="Titulo" TargetType="Label">
-                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="TextColor" Value="#9b2bfc"/>
+            </Style>
+            <Style x:Key="Conteudo" TargetType="Label">
+                <Setter Property="TextColor" Value="#5195fc"/>
+                <Setter Property="FontSize" Value="20"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ScrollView>
         <StackLayout VerticalOptions="FillAndExpand">
-        <Label 
-            Text="Programação WEB"
+            <Label x:Name="lblTitulo"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" Style="{StaticResource Titulo}"/>
-        <Label 
-            Text="Programação Web I:
-            Introdução ao Desenvolvimento Web: Nesta primeira fase, os alunos são apresentados aos fundamentos do desenvolvimento de páginas web. Isso inclui o estudo de HTML (para a estruturação de conteúdo), CSS (para a estilização e layout das páginas) e o básico de JavaScript (para a interação com o usuário).
-            Conceitos básicos de Front-End: O foco é garantir que os alunos compreendam como construir interfaces básicas, criar páginas responsivas, e entender como os navegadores processam e exibem páginas da web."
+            HorizontalOptions="Center" />
+            <Label x:Name="lblConteudo"
+                   Style="{StaticResource Conteudo}"
                            VerticalOptions="Center"
-                           HorizontalOptions="Center"/>
+                           HorizontalOptions="CenterAndExpand"/>
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

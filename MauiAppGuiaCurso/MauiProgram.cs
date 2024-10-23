@@ -16,8 +16,10 @@ namespace MauiAppGuiaCurso
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
+
+            // Aqui você pode adicionar outras configurações, como serviços e middleware
 
             return builder.Build();
         }

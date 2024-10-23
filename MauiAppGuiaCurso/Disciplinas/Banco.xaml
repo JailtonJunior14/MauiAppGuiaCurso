@@ -2,19 +2,31 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppGuiaCurso.Disciplinas.Banco"
-             Title="Banco">
-    <VerticalStackLayout>
-        <Label 
-            Text="Banco de Dados"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Label 
-            Text="O que é?"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Label 
-            Text="O que aprendemos?"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Banco de Dados I"
+             BackgroundColor="#03091f">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Titulo" TargetType="Label">
+                <Setter Property="TextColor" Value="#9b2bfc"/>
+            </Style>
+            <Style x:Key="Conteudo" TargetType="Label">
+                <Setter Property="TextColor" Value="#5195fc"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
+            <Label 
+        x:Name="lblTitulo"
+        Style="{StaticResource Titulo}"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" />
+            <Label 
+        Style="{StaticResource Conteudo}"
+x:Name="lblConteudo"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

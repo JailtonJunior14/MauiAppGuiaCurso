@@ -2,16 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppGuiaCurso.Anos.Primeiro"
-             Title="Primeiro">
+             Title="Primeiro"
+             BackgroundColor="#03091f">
     <ContentPage.Resources>
         <Style x:Key="btncursos" TargetType="Button">
             <Setter Property="HorizontalOptions" Value="Fill"/>
             <Setter Property="VerticalOptions" Value="Fill"/>
             <Setter Property="FontSize" Value="15"/>
-            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="TextColor" Value="#5195fc"/>
             <Setter Property="BackgroundColor" Value="Transparent"/>
             <Setter Property="CornerRadius" Value="2"/>
-            <Setter Property="BorderColor" Value="Red"/>
+            <Setter Property="BorderColor" Value="#5195fc"/>
             <Setter Property="BorderWidth" Value="1"/>
         </Style>
     </ContentPage.Resources>

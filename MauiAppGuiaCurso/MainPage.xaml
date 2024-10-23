@@ -1,20 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiAppGuiaCurso.MainPage">
+             x:Class="MauiAppGuiaCurso.MainPage"
+             BackgroundColor="#03091f">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="btncursos" TargetType="Button">
+            <Style x:Key="btnprimeiro" TargetType="Button">
                 <Setter Property="HorizontalOptions" Value="Fill"/>
                 <Setter Property="VerticalOptions" Value="Fill"/>
                 <Setter Property="FontSize" Value="15"/>
-                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="TextColor" Value="#5195fc"/>
                 <Setter Property="BackgroundColor" Value="Transparent"/>
                 <Setter Property="CornerRadius" Value="2"/>
-                <Setter Property="BorderColor" Value="Red"/>
+                <Setter Property="BorderColor" Value="#5195fc"/>
                 <Setter Property="BorderWidth" Value="1"/>
 
             </Style>
+            <Style x:Key="btnsegundo" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="#824bfa"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="CornerRadius" Value="2"/>
+                <Setter Property="BorderColor" Value="#824bfa"/>
+                <Setter Property="BorderWidth" Value="1"/>
+
+            </Style>
+            <Style x:Key="btnterceiro" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="#c642ff"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="CornerRadius" Value="2"/>
+                <Setter Property="BorderColor" Value="#c642ff"/>
+                <Setter Property="BorderWidth" Value="1"/>
+
+            </Style>
+            
         </ResourceDictionary>
     </ContentPage.Resources>
     <ScrollView>
@@ -23,9 +47,9 @@
               >
 
             <!-- Botões -->
-            <Button Grid.Row="0" Style="{StaticResource btncursos}" Text="Primeiro" x:Name="primeiro" Clicked="primeiro_Clicked"/>
-            <Button Grid.Row="1" Style="{StaticResource btncursos}" Text="Segundo" x:Name="segundo" Clicked="segundo_Clicked"/>
-            <Button Grid.Row="2" Style="{StaticResource btncursos}" Text="Terceiro" x:Name="terceiro" Clicked="terceiro_Clicked"/>
+            <Button Grid.Row="0" Style="{StaticResource btnprimeiro}" Text="Primeiro" x:Name="primeiro" Clicked="primeiro_Clicked"/>
+            <Button Grid.Row="1" Style="{StaticResource btnsegundo}" Text="Segundo" x:Name="segundo" Clicked="segundo_Clicked"/>
+            <Button Grid.Row="2" Style="{StaticResource btnterceiro}" Text="Terceiro" x:Name="terceiro" Clicked="terceiro_Clicked"/>
         </Grid>
     </ScrollView>
 </ContentPage>

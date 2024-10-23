@@ -4,10 +4,16 @@ namespace MauiAppGuiaCurso.Anos;
 
 public partial class Terceiro : ContentPage
 {
-	public Terceiro()
+    string[][] conteudosWeb = new string[3][];
+    public Terceiro()
 	{
 		InitializeComponent();
-	}
+        conteudosWeb[0] = new string[] { "web 1", "a" };
+        conteudosWeb[1] = new string[] { "web 2", "a"};
+        conteudosWeb[2] = new string[] { "Programação WEB III", "Aplicações Web Completas: Nesta última fase, o aluno aprende a construir aplicações web mais completas, que envolvem não apenas o front-end, mas também o back-end. A integração com APIs externas e a segurança de dados são tópicos chave." +
+            "\r\nFrameworks e Ferramentas Avançadas: É provável que frameworks de back-end como Node.js ou linguagens de programação para back-end como PHP ou Python sejam apresentados. Além disso, a disciplina pode cobrir o uso de frameworks de desenvolvimento web full-stack, como MEAN/MERN (MongoDB, Express, Angular/React, Node.js)." +
+            "\r\nBanco de Dados e Persistência de Dados: Outra área de foco é a persistência de dados em bancos de dados relacionais ou não relacionais (ex: MySQL, MongoDB), com foco em segurança e escalabilidade de sistemas web." };
+    }
 
     private void Qualidade_Clicked(object sender, EventArgs e)
     {
@@ -37,7 +43,14 @@ public partial class Terceiro : ContentPage
     {
         try
         {
-            Navigation.PushAsync(new ProgramacaoW());
+            string[] conteudoWeb = conteudosWeb[2];
+
+
+
+            Navigation.PushAsync(new ProgramacaoW
+            {
+                BindingContext = conteudoWeb
+            });
         }
         catch (Exception ex)
         {
